@@ -17,6 +17,7 @@ app.get('/hello', (req, res) => {
         if (operation <= 20) {
             result.push(operation)
         }
+        else print(x)
     }
 
     res.send(result)
