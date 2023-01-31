@@ -1,9 +1,27 @@
-const { application } = require('express');
+const express = require("express");
 
-application.get('/hello', (req, res) => {
-    res.send("Hello world!");
+const app = express();
+const port = 8080;
+
+
+app.get('/hello', (req, res) => {
+    var x;
+    var y = 15;
+    var numbers = [12, 75, 23, 2, 56, 84, 46, 157]
+    var result = []
+
+    for (let i in numbers) {
+        x = numbers[i] / 2
+        
+        let operation = (x - y) * 2
+        if (operation >= 20) {
+            result.push(operation)
+        }
+    }
+
+    res.send(result)
 });
 
-application.listen(3000, () => {
-    console.log("Server listening on port 3000");
+app.listen(port, () => {
+    console.log(`Server listening on port ${port}`);
 })
