@@ -14,7 +14,7 @@ app.get('/hello', (req, res) => {
         x = numbers[i] / 2
         
         let operation = (x - y) * 2
-        if (operation >= 20) {
+        if (operation <= 20) {
             result.push(operation)
         }
     }
