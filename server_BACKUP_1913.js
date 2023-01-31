@@ -17,7 +17,11 @@ app.get('/hello', (req, res) => {
         if (operation <= 20) {
             result.push(operation)
         }
+<<<<<<< HEAD
+        else print(x)
+=======
         else result.push(x)
+>>>>>>> feature-z
     }
 
     res.send(result)
