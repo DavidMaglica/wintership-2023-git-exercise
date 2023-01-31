@@ -8,19 +8,28 @@ app.get('/hello', (req, res) => {
     var x;
     var y = 15;
     var numbers = [12, 75, 23, 2, 56, 84, 46, 157]
-    var result = []
+    var result = [];
 
     for (let i in numbers) {
         x = numbers[i] / 2
         
         let operation = (x - y) * 2
         if (operation <= 20) {
-            result.push(operation)
+            result.push(operation);
         }
-        else result.push(x)
+        else result.push(x);
     }
 
-    res.send(result)
+    var result2 = [];
+    while (result.length != 0) {
+        let popped = result.pop();
+        
+        popped++;
+        result2.push(popped);
+        console.log(popped)
+    }
+
+    res.send(result);
 });
 
 app.listen(port, () => {
